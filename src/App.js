@@ -34,10 +34,10 @@ class App extends React.Component{
   render(){
     return (
       <>
-        <Header/>
-        {/*<CoverMovies/>*/}
+        <Header  data={this.state.data}/>
+        <CoverMovies/>
         {/*<Search/>*/}
-        <MovieInfo  movie={this.state} setData={this.setData}/>
+        <MovieInfo  movie={this.state.movieSelected} setData={this.setData}/>
 
       {/*<MovieInfo  movie={this.state.Search} setData={this.setData}/>*/}
      {/* <FilterMovies/>*/}
