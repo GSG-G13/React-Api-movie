@@ -27,14 +27,21 @@ class App extends React.Component{
     
   }
 
-  genreSelected = ( genre) => {
-    console.log(genre)
-  this.setState( { genre : genre   })
+  genresSelected = ( genres) => {
+    console.log(genres)
+  this.setState( { genres : genres   })
 }
   render(){
     return (
       <>
-          <AllMovies genres={this.state.genre}/>
+        {/*<FavoriteMovie/>*/}
+        {/*<CoverMovies/>*/}
+        {/*<Search/>*/}
+        <MovieInfo  movie={this.state} setData={this.setData}/>
+
+      {/*<MovieInfo  movie={this.state.Search} setData={this.setData}/>*/}
+     {/* <FilterMovies/>*/}
+      <AllMovies genres={this.state.genre}/>
 
       
 
