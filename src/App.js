@@ -34,7 +34,7 @@ class App extends React.Component{
   render(){
     return (
       <>
-        {/*Header/>*/}
+        <Header/>
         {/*<CoverMovies/>*/}
         {/*<Search/>*/}
         <MovieInfo  movie={this.state} setData={this.setData}/>
