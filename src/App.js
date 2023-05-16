@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
+import AllMovies from './components/AllMovies';
+import CoverMovies from './components/CoverMovies';
+import FavoriteList from './components/FavoriteList';
+import FavoriteMovie from './components/FavoriteMovie';
+import FilterMovies from './components/FilterMovies';
+import MovieInfo from './components/MovieInfo';
+import Search from './components/Search';
+import SearcResult from './components/SearcResult';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component{
+  state = {
+
+  }
+  render(){
+    return (
+      <>
+      </>
+
+    )
+
+  }
+
+
 }
 
 export default App;
