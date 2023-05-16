@@ -1,4 +1,5 @@
 import React from "react";
+import FavoriteList from "./FavoriteList";
 
 class Header extends React.Component {
     state = {
@@ -25,10 +26,11 @@ class Header extends React.Component {
         return (
             <header>
                 <nav>
-                    <h1>Movies  World</h1>
+                    <h1>Movies World</h1>
                     <ul>
                         <li>Home</li>
                         <li onClick={() => this.setState({ showFavoriteList: !this.state.showFavoriteList })}>Favorite List 
+                            <FavoriteList data={this.state.data} showFavoriteList={this.state.showFavoriteList /*this.state.showFavoriteList */} />
                         </li>
                     </ul>
                 </nav>
