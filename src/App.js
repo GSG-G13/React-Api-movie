@@ -1,8 +1,8 @@
 import React from 'react';
 import AllMovies from './components/AllMovies';
+import Header from './components/Header'
 import CoverMovies from './components/CoverMovies';
 import FavoriteList from './components/FavoriteList';
-import FavoriteMovie from './components/FavoriteMovie';
 import FilterMovies from './components/FilterMovies';
 import MovieInfo from './components/MovieInfo';
 import Search from './components/Search';
@@ -34,7 +34,7 @@ class App extends React.Component{
   render(){
     return (
       <>
-        {/*<FavoriteMovie/>*/}
+        {/*Header/>*/}
         {/*<CoverMovies/>*/}
         {/*<Search/>*/}
         <MovieInfo  movie={this.state} setData={this.setData}/>
