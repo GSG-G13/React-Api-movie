@@ -13,7 +13,8 @@ class App extends React.Component{
     movieInfo : {},
     movie:null,
     genre:'All',
-    data:[]
+    data:[],
+    filterMovies: "All",
   }
   
   movieSelected = (id, name) => {
@@ -34,6 +35,10 @@ class App extends React.Component{
   this.setState( { genres : genres   })
 }
 
+handleSelect = (value) => {
+  this.setState( { filterMovies : value   })
+}
+
   render(){
     return (
       <>
@@ -41,8 +46,8 @@ class App extends React.Component{
         <CoverMovies/>
         <Search movieSelected = {this.movieSelected}/>
         <MovieInfo  movie={this.state.movieSelected} setData={this.setData}/>
-     <FilterMovies genresSelected={this.genresSelected} />
-      <AllMovies genres={this.state.genre}/>
+     <FilterMovies handleSelect={this.handleSelect} genresSelected={this.genresSelected} />
+      <AllMovies genres={this.state.filterMovies}/>
 
       
 

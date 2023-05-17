@@ -1,25 +1,21 @@
 import React from "react";
 
 class FilterMovies extends React.Component {
-  state = {
-    filterMovies: "All",
-  };
 
-  handleFilter = (value) => {
-    this.setState({ filterMovies: value });
-    this.props.genresSelected(value); 
-  };
+
+
 
   render() {
+    const {handleSelect} = this.props
     return (
       <section id="filter-movies">
         <h2>Select Your Favorite Movie</h2>
+        <div className="filterN">
         <p>Movies filtered by genres.</p>
         <select
           type="text"
           name="filterMovies"
-          onChange={(e) => this.handleFilter(e.target.value)}
-          value={this.state.filterMovies}
+          onChange={(e) => handleSelect(e.target.value)}
         >
           <option value="All">All</option>
           <option value="Drama">Drama</option>
@@ -28,6 +24,7 @@ class FilterMovies extends React.Component {
           <option value="Thriller">Thriller</option>
           <option value="Crime">Crime</option>
         </select>
+        </div>
       </section>
     );
   }
