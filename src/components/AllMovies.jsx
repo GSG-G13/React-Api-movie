@@ -6,7 +6,9 @@ class AllMovies extends React.Component {
     componentDidMount() {
         fetch(`https://api.tvmaze.com/shows`)
         .then((res) => res.json())
-        .then((data)=> this.setState({allMovies: data}))
+        .then((data)=> {
+            this.setState({allMovies: data})
+        })
     }
     
     buildSection = (ele) => {
@@ -36,36 +38,34 @@ class AllMovies extends React.Component {
 
   render() {
     const genres = this.props.genres
-   
+
+    let elements = [];
+    
+
+    if(genres === 'All') {
+        elements = this.state.allMovies.map(mov => {
+           return this.buildSection(mov)
+        })   
+    } else if(genres !== "All") {
+        elements = this.state.allMovies.filter(mov => {
+            return mov.genres.includes(genres)
+        }).map(mov => {
+            return this.buildSection(mov)
+         })
+    }
+    
+    else{
+        <h1>Loading ...</h1>
+    }
+    
+
     if(!this.state.allMovies){
         return <h1>Loading ...</h1>
     }
 
     return (
         <div className="card-container">
-        {console.log(this.state.allMovies[0])}
-        {
-        
-
-
-
-        genres ==='All' ? 
-        this.state.allMovies.map((ele) => {
-            return  this.buildSection(ele)
-       
-        })
-    
-    :
-       this.state.allMovies.filter((ele)=> ele.genres.includes(genres))
-       .map((ele) => {
-        return this.buildSection(ele)
-
-
-
-
-        })
-    }
-
+        {elements}
     </div>
     )}
 }

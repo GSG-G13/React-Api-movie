@@ -34,7 +34,23 @@ ul li{
   
 
 }
+#filter-movies h2{
+  display: flex;
+  justify-content: center;
 
+}
+.filterN {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.filterN select{
+  width: 100px;
+  height: 30px;
+}
 #intro #img-container img {
   width: 100%;
   height: 550px;
@@ -48,7 +64,7 @@ ul li{
 #search{
   position: absolute;
 margin-top: -400px;
-margin-left: 550px;
+margin-left: 600px;
 text-align: center;
  
 }
