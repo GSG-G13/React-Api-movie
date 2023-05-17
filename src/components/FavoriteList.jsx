@@ -32,7 +32,7 @@ componentDidMount(){
         }
         return (
             <div id="favorite-list">
-                <h3> Favorite List </h3>
+                {/*<h3> Favorite List </h3>*/}
                 <ul className="fav-list">
 
                     {this.state.data.map((ele, id) => <li key={id}>{ele}</li>)}
