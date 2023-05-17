@@ -33,6 +33,7 @@ class App extends React.Component{
     console.log(genres)
   this.setState( { genres : genres   })
 }
+
   render(){
     return (
       <>

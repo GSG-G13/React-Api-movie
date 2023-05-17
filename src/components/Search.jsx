@@ -3,13 +3,14 @@ import SearchResult from "./SearchResult";
 
 class Search extends React.Component{
 state = {
-    searchQuery : ''
+    searchQuery : '',
+
 }
     handleSearch = (value) => {
         this.setState({searchQuery: value})
     }
 
-   
+
 
 render() {
     return ( 
@@ -36,3 +37,5 @@ render() {
 }
 
 export default Search;
+
+

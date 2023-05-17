@@ -6,6 +6,13 @@ class SearcResult extends React.Component {
         data : null
     }
 
+    
+    handleMovieSelect = (movie) => {
+        this.props.movieSelected(movie);
+      };
+
+
+
     getSearchResult = (name) => {
         fetch(`https://api.tvmaze.com/search/shows?q=${name}`)
         .then((res) => {

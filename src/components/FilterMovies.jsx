@@ -6,15 +6,13 @@ class FilterMovies extends React.Component {
 state = {
     filterMovies : ''
 }
+
     handleFilter = (value) => {
         this.setState({filterMovies: value})
+        this.props.genresSelected(value)
+
     }
 
-    componentDidUpdate = (prevProps, prevState) => {
-        if (this.state.filterMovies !== prevState.filterMovies) {
-            this.props.genresSelected(this.state.filterMovies)
-        }
-    }
 
 
 
@@ -30,7 +28,7 @@ render() {
             type="text"
             name="filterMovies"
             onChange={(e) => this.handleFilter(e.target.value)}
-            value={this.state.searchQuery}
+            value={this.state.filterMovies}
             >
                 <option>All</option>
                 <option>Drama</option>
