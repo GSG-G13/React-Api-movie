@@ -48,10 +48,11 @@ ul li{
 #search{
   position: absolute;
 margin-top: -400px;
-margin-left: 600px;
+margin-left: 550px;
 text-align: center;
  
 }
+
 #search h2{
   margin-bottom: 40px;
 }
@@ -94,7 +95,13 @@ text-align: center;
   margin: 2px;
   padding: 5px;
   width: 250px;
-  height: 250px;
+  height: 450px;
+}
+.imgCard{
+  padding: unset;
+  width: 250px;
+  border-radius: 8px;
+height: 300px;
 }
 .card .card-1{
   margin-bottom: 10px;

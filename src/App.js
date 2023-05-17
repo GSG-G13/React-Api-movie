@@ -41,7 +41,7 @@ class App extends React.Component{
         <CoverMovies/>
         <Search movieSelected = {this.movieSelected}/>
         <MovieInfo  movie={this.state.movieSelected} setData={this.setData}/>
-      <FilterMovies genresSelected={this.genresSelected} />
+     <FilterMovies genresSelected={this.genresSelected} />
       <AllMovies genres={this.state.genre}/>
 
       
